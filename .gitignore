@@ -1,0 +1,63 @@
+# Operating System files
+.netrwist
+.DS_Store          # macOS
+Thumbs.db         # Windows
+ehthumbs.db       # Windows
+Icon?             # macOS
+Desktop.ini       # Windows
+$RECYCLE.BIN/     # Windows
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Backup files
+*~
+*.bak
+*.orig
+
+# Other
+*.pid
+*.seed
+*.sublime-workspace
+*.sublime-project
+*.sublime-settings
+*.sublime-merge
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Coverage files
+coverage/
+*.cover
+*.coverage
+*.lcov
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# macOS specific
+.AppleDouble
+.LSOverride
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini

@@ -1,0 +1,12 @@
+root = true
+
+[*]
+indent_style = space
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+trim_trailling_whitespace = true
+max_line_length = 120
+
+[*.{lua,toml}]
+indent_size = 2

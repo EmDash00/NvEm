@@ -1,0 +1,212 @@
+# This is your rocks.nvim plugins declaration file.
+# Here is a small yet pretty detailed example on how to use it:
+#
+# [plugins]
+# nvim-treesitter = "semver_version"  # e.g. "1.0.0"
+
+# List of non-Neovim rocks.
+# This includes things like `toml` or other lua packages.
+[rocks]
+magick = "1.6.0"
+
+[rocks_lazy]
+import = "plugins"
+
+# List of Neovim plugins to install alongside their versions.
+# If the plugin name contains a dot then you must add quotes to the key name!
+[plugins]
+"rocks.nvim" = "2.43.0"
+"rocks-git.nvim" = "2.5.2"
+"rocks-config.nvim" = "3.1.0"
+"rocks-lazy.nvim" = "1.1.1"
+
+"onedark.nvim" = { version = "scm", opt = true }
+"telescope.nvim" = "scm"
+"lualine.nvim" = "scm"
+"neoscroll.nvim" = "scm"
+"trouble.nvim" = { version = "3.6.0" }
+"bufferline.nvim" = { version = "4.9.0", pin = true }
+"vimpeccable" = "scm"
+"nvim-autopairs" = "scm"
+"conform.nvim" = { version = "8.1.0", pin = true }
+"none-ls.nvim" = "scm"
+"none-ls-extras.nvim" = "scm"
+"nvim-lspconfig" = "1.2.0"
+"indent-blankline.nvim" = "3.8.6"
+"project.nvim" = "scm"
+"marks.nvim" = "scm"
+"lspkind.nvim" = "scm"
+"image.nvim" = { version = "1.3.0", opt = true }
+"dressing.nvim" = "3.1.1"
+"rainbow-delimiters.nvim" = "0.8.0"
+"nvim-lint" = "scm"
+"hydra.nvim" = "1.0.2"
+"lazydev.nvim" = { version = "1.9.0" }
+"neo-tree.nvim" = { version = "3.27", opt = true }
+"nvim-jdtls" = { version = "0.2.0", opt = true }
+"diffview.nvim" = "scm"
+"mini.bufremove" = "0.14.0"
+vim-startuptime = "4.5.0"
+
+[plugins."neo-tree.diagnostics.nvim"]
+git = "mrbjarksen/neo-tree-diagnostics.nvim"
+
+#[plugins."care.nvim"]
+#git = "max397574/care.nvim"
+#rev = "main"
+
+[plugins.vim-arduino]
+git = "stevearc/vim-arduino"
+rev = "master"
+opt = true
+
+#[plugins.nvim-drawer]
+#git = "mikew/nvim-drawer"
+#rev = "2b1db633d9eca134502e1753e5a38974ba309fe1"
+
+[plugins.nvim-highlight-colors]
+git = "brenoprata10/nvim-highlight-colors"
+rev = "a411550ef85cae467b889ba7d1a96bd78332d90e"
+
+[plugins."webtool.nvim"]
+git = "ray-x/web-tools.nvim"
+rev = "eb0ac27bd3eb0beb06b7190a11e2e043049a4ccc"
+
+[plugins.vim-tmux-navigator]
+git = "christoomey/vim-tmux-navigator"
+rev = "v1.0^{}"
+
+[plugins.skim]
+git = "lotabout/skim"
+rev = "v0.9.4"
+
+[plugins."skim.vim"]
+git = "lotabout/skim.vim"
+rev = "aa2a5c44a6640843868cc5c1444abc0093e90e5a"
+
+[plugins."nvim-tree.lua"]
+git = "nvim-tree/nvim-tree.lua"
+rev = "v1.9.0^{}"
+
+[plugins."indentpython.vim"]
+git = "vim-scripts/indentpython.vim"
+rev = "0.3"
+ft = "python"
+
+[plugins.emmet-vim]
+git = "mattn/emmet-vim"
+rev = "6c511a8d7d2863066f32e25543e2bb99d505172c"
+opt = true
+
+[plugins.vimtex]
+git = "lervag/vimtex"
+rev = "v2.15"
+opt = true
+
+[plugins."cheatsheet.nvim"]
+git = "sudormrfbin/cheatsheet.nvim"
+rev = "9716f9aaa94dd1fd6ce59b5aae0e5f25e2a463ef"
+
+[plugins.nvim-lsp-file-operations]
+git = "antosha417/nvim-lsp-file-operations"
+rev = "92a673de7ecaa157dd230d0128def10beb56d103"
+
+[plugins."gitsigns.nvim"]
+git = "lewis6991/gitsigns.nvim"
+rev = "v0.9.0^{}"
+
+[plugins.nerdcommenter]
+git = "preservim/nerdcommenter"
+rev = "2.7.0^{}"
+
+#[plugins.neorg]
+#version = "8.4.0"
+#opt = true
+#pin = true
+
+# Treesitter
+
+[plugins.nvim-treesitter]
+git = "nvim-treesitter/nvim-treesitter"
+rev = "master"
+
+[plugins.nvim-treesitter-textobjects]
+git = "nvim-treesitter/nvim-treesitter-textobjects"
+rev = "master"
+
+[plugins.tree-sitter-norg]
+git = "nvim-neorg/tree-sitter-norg"
+rev = "v0.2.6"
+ft = "norg"
+
+[plugins.tree-sitter-toml]
+version = "scm"
+ft = "toml"
+
+# CMP/LSP
+
+#[plugins.care-cmp]
+#git = "max397574/care-cmp"
+#rev = "main"
+
+[plugins."blink.cmp"]
+git = 'saghen/blink.cmp'
+rev = "v0.9.0"
+
+[plugins."blink-emoji.nvim"]
+git = 'moyiz/blink-emoji.nvim'
+rev = "master"
+
+[plugins.cmp-path]
+version = "scm"
+event = "InsertEnter"
+
+[plugins."jupytext.nvim"]
+git = "GCBallesteros/jupytext.nvim"
+rev = "c8baf3ad344c59b3abd461ecc17fc16ec44d0f7b"
+opt = true
+
+[plugins.molten-nvim]
+git = "benlubas/molten-nvim"
+rev = "v1.9.1"
+opt = true
+
+[plugins.sniprun]
+git = "michaelb/sniprun"
+rev = "v1.3.9^{}"
+opt = true
+
+[plugins.quarto-nvim]
+git = "quarto-dev/quarto-nvim"
+rev = "v1.2.0"
+
+[plugins."otter.nvim"]
+version = "2.5.1"
+opt = true
+
+#[plugins.nvim-java]
+#git = "nvim-java/nvim-java"
+#rev = "v2.0.2"
+#ft = "java"
+
+# Snippets
+
+[plugins.luasnip]
+git = "L3MON4D3/LuaSnip"
+rev = "v2.3.0^{}"
+opt = true
+
+[plugins.cmp_luasnip]
+git = "saadparwaiz1/cmp_luasnip"
+rev = "05a9ab28b53f71d1aece421ef32fee2cb857a843"
+event = "InsertEnter"
+
+[plugins.friendly-snippets]
+git = "rafamadriz/friendly-snippets"
+rev = "00ba9dd3df89509f95437b8d595553707c46d5ea"
+event = "InsertEnter"
+
+[plugins.vim-snippets]
+git = "honza/vim-snippets"
+rev = "1.0.0"
+
