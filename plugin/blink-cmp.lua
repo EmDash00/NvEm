@@ -78,6 +78,7 @@ require("blink-cmp").setup {
 
   },
   keymap = {
+    preset = 'none',
     ['<s-tab>'] = { 'select_prev', 'fallback' },
     ['<tab>'] = { 'select_next', 'fallback' },
     ['<cr>'] = { 'accept', 'fallback' },
@@ -86,8 +87,6 @@ require("blink-cmp").setup {
     ['<c-l>'] = { 'snippet_forward', 'fallback' },
     ['<c-h>'] = { 'snippet_backward', 'fallback' },
 
-    -- disable a keymap from the preset
-    ['<C-e>'] = {},
     -- show with a list of providers
     ['<C-space>'] = { function(cmp) cmp.show({ providers = { 'snippets' } }) end },
   }
