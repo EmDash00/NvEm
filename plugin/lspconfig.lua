@@ -42,6 +42,15 @@ vim.api.nvim_create_autocmd("CursorHold", {
   end,
 })
 
+-- Patch the floating preview to have a rounded border
+local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+  opts = opts or {}
+  opts.max_height = 30
+  opts.max_width = 80
+  opts.border = opts.border or "rounded"
+  return orig_util_open_floating_preview(contents, syntax, opts, ...)
+end
 
 -- Defaults
 
@@ -84,7 +93,7 @@ local default_on_attach = function(client, bufnr)
     nnoremap(lsp_keymap_opts, "<leader>rn", lsp.buf.rename)
     nnoremap(lsp_keymap_opts, "<leader>c", lsp.buf.code_action)
     nnoremap(lsp_keymap_opts, "<leader>f", lsp.buf.format)
-    nnoremap(lsp_keymap_opts, "<leader>r", lsp.buf.references)
+    nnoremap(lsp_keymap_opts, "<leader>rf", lsp.buf.references)
   end)
 
   if client.name == "ruff" then
