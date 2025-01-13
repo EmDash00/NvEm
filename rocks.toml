@@ -47,6 +47,12 @@ import = "plugins"
 "diffview.nvim" = "scm"
 "mini.bufremove" = "0.14.0"
 vim-startuptime = "4.5.0"
+"plenary.nvim" = "scm"
+
+[plugins."lean.nvim"]
+git = "Julian/lean.nvim"
+rev = "2024.12.2"
+opt = true
 
 [plugins."neo-tree.diagnostics.nvim"]
 git = "mrbjarksen/neo-tree-diagnostics.nvim"
@@ -209,4 +215,16 @@ event = "InsertEnter"
 [plugins.vim-snippets]
 git = "honza/vim-snippets"
 rev = "1.0.0"
+
+[plugins."satellite.nvim"]
+git = "lewis6991/satellite.nvim"
+rev = "main"
+
+[plugins.vim-matchup]
+git = "andymass/vim-matchup"
+rev = "v0.7.3"
+
+[plugins."switch.vim"]
+git = "andrewradev/switch.vim"
+rev = "main"
 

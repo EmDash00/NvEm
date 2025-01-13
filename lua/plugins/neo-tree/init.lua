@@ -1,4 +1,5 @@
 return {
+  "neo-tree.nvim",
   cmd = { "Neotree" },
   beforeAll = function()
     vim.keymap.set('n', '<C-f>', '<cmd>Neotree toggle<cr>')

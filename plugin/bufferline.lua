@@ -76,6 +76,7 @@ require('bufferline').setup {
     offsets = {
       --{ filetype = "NvimTree", text = "File Explorer" },
       { filetype = "Outline", text = "Symbols Outline" },
+      { filetype  = "leaninfo", text = "Lean Infoview" },
       {
         text = "Neotree",
         filetype = "neo-tree",

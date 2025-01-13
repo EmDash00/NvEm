@@ -167,6 +167,7 @@ setup {
   clangd = {},
   jdtls = {},
   lua_ls = {},
+  --leanls = {},
   vimls = {},
   texlab = {},
   jsonls = {
