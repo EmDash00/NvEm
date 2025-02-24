@@ -17,6 +17,9 @@ require("nvim-treesitter.configs").setup({
     "latex",
     "markdown_inline"
   },
+  matchup = {
+    enable = true,              -- mandatory, false will disable the whole extension
+  },
   auto_install = true,
   ignore_install = {},
   sync_install = false,

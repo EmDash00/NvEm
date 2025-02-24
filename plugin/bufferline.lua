@@ -20,6 +20,12 @@ nnoremap(opts, '<leader>bq', ':BufferLinePickClose<CR>')
 nnoremap(opts, '<leader>bh', ':BufferLineMovePrev<CR>')
 nnoremap(opts, '<leader>bl', ':BufferLineMoveNext<CR>')
 
+local ignore = {
+  qf = true,
+  leaninfo = true
+}
+
+
 require('bufferline').setup {
   options = {
     mode = "buffers", -- set to "tabs" to only show tabpages instead
@@ -64,14 +70,14 @@ require('bufferline').setup {
       return s
     end,
     custom_filter = function(buf_number, buf_numbers)
-      -- filter out filetypes you don't want to see
-      -- filter out by buffer name
+      --if vim.bo[buf_number].filetype ~= "leaninfo" then
+        --return true
+      --end
+      return ignore[vim.bo[buf_number].filetype] == nil
 
-      -- filter out based on arbitrary rules
-      -- e.g. filter out vim wiki buffer from tabline in your work repo
-      if vim.bo[buf_number].filetype ~= "qf" then
-        return true
-      end
+      --if vim.bo[buf_number].filetype ~= "leaninfo" then
+        --return true
+      --end
     end,
     offsets = {
       --{ filetype = "NvimTree", text = "File Explorer" },

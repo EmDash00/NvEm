@@ -8,40 +8,6 @@ local diagnostic, lsp = vim.diagnostic, vim.lsp
 
 vim.o.updatetime = 250
 
-
--- Diagnostics
-diagnostic.config({
-  virtual_text = false,
-  signs = true,
-  underline = true,
-  float = {
-    border = "rounded",
-  },
-  update_in_insert = true,
-  severity_sort = true,
-})
-
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
-
--- Diagnostic hold
-vim.api.nvim_create_autocmd("CursorHold", {
-  --buffer = bufnr,
-  callback = function()
-    diagnostic.open_float(nil, {
-      focusable = false,
-      close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
-      source = "always",
-      prefix = " ",
-      suffix = "",
-      scope = "cursor",
-    })
-  end,
-})
-
 -- Patch the floating preview to have a rounded border
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
 function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
@@ -116,7 +82,14 @@ setup {
   --denols = {},
   ts_ls = {},
   cssls = {},
-  cssmodules_ls = {},
+  cssmodules_ls = {
+    cmd = { "npx", "cssmodules-language-server" },
+    on_attach = function (client)
+        -- avoid accepting `definitionProvider` responses from this LSP
+        client.server_capabilities.definitionProvider = false
+        lsp_defaults.on_attach(client)
+    end,
+  },
   html = {},
   superhtml = {}
 

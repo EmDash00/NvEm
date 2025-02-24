@@ -21,7 +21,6 @@ import = "plugins"
 "rocks-lazy.nvim" = "1.1.1"
 
 "onedark.nvim" = { version = "scm", opt = true }
-"telescope.nvim" = "scm"
 "lualine.nvim" = "scm"
 "neoscroll.nvim" = "scm"
 "trouble.nvim" = { version = "3.6.0" }
@@ -49,10 +48,21 @@ import = "plugins"
 vim-startuptime = "4.5.0"
 "plenary.nvim" = "scm"
 
+[plugins.nvim-lightbulb]
+git = "kosayoda/nvim-lightbulb"
+rev = "master"
+
+[plugins.goto-preview]
+git = "rmagatti/goto-preview"
+rev = "main"
+
+[plugins."telescope.nvim"]
+git = "nvim-telescope/telescope.nvim"
+rev = "master"
+
 [plugins."lean.nvim"]
 git = "Julian/lean.nvim"
-rev = "2024.12.2"
-opt = true
+rev = "main"
 
 [plugins."neo-tree.diagnostics.nvim"]
 git = "mrbjarksen/neo-tree-diagnostics.nvim"
@@ -222,7 +232,7 @@ rev = "main"
 
 [plugins.vim-matchup]
 git = "andymass/vim-matchup"
-rev = "v0.7.3"
+rev = "master"
 
 [plugins."switch.vim"]
 git = "andrewradev/switch.vim"

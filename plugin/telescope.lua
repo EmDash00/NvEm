@@ -6,7 +6,7 @@ local builtin = require('telescope.builtin')
 
 local opts = {'silent'}
 
-telescope.load_extension('projects')
+--telescope.load_extension('projects')
 
 telescope.setup{
   defaults = {

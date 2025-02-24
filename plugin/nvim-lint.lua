@@ -4,6 +4,7 @@ local diagnostic = vim.diagnostic
 
 vim.o.updatetime = 250
 
+-- Diagnostics
 diagnostic.config({
   virtual_text = false,
   signs = true,
@@ -14,6 +15,28 @@ diagnostic.config({
   update_in_insert = true,
   severity_sort = true,
 })
+
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
+-- Diagnostic hold
+vim.api.nvim_create_autocmd("CursorHold", {
+  --buffer = bufnr,
+  callback = function()
+    diagnostic.open_float(nil, {
+      focusable = false,
+      close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+      source = "always",
+      prefix = " ",
+      suffix = "",
+      scope = "cursor",
+    })
+  end,
+})
+
 
 lint.linters_by_ft = {
   python = { "codespell", "editorconfig-checker" },
