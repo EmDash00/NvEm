@@ -64,7 +64,7 @@ setup {
   clangd = {},
   jdtls = {},
   lua_ls = {},
-  leanls = {},
+  --leanls = {},
   vimls = {},
   texlab = {},
   jsonls = {

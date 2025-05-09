@@ -25,6 +25,7 @@ api.nvim_create_autocmd(
       require('colors.blink-cmp')
       require('colors.diagnostic')
       require('colors.vimtex')
+      require('colors.nvim-lightbulb')
     end
   }
 )

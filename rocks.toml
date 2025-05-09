@@ -27,7 +27,7 @@ import = "plugins"
 "bufferline.nvim" = { version = "4.9.0", pin = true }
 "vimpeccable" = "scm"
 "nvim-autopairs" = "scm"
-"conform.nvim" = { version = "8.1.0", pin = true }
+"conform.nvim" = { version = "9.0.0", pin = true }
 "none-ls.nvim" = "scm"
 "none-ls-extras.nvim" = "scm"
 "nvim-lspconfig" = "1.2.0"
@@ -185,7 +185,6 @@ opt = true
 [plugins.molten-nvim]
 git = "benlubas/molten-nvim"
 rev = "v1.9.1"
-opt = true
 
 [plugins.sniprun]
 git = "michaelb/sniprun"

@@ -3,10 +3,13 @@ local conform = require("conform")
 conform.setup({
   formatters = {
     ruff_organize_imports = {
-      command = "uv run ruff"
+      command = require("conform.util").find_executable({".venv/bin/ruff"}, "ruff"),
     },
     ruff_format = {
-      command = "uv run ruff"
+      command = require("conform.util").find_executable({".venv/bin/ruff"}, "ruff"),
+    },
+    clangformat = {
+      command = require("conform.util").find_executable({"/usr/bin/clang-format"}, "clangformat"),
     }
   },
   formatters_by_ft = {
@@ -48,19 +51,3 @@ vim.keymap.set("", "<leader>f", function()
     end
   end)
 end, { desc = "Format code" })
-
---null_ls.setup({
---debug = true,
---sources = {
---builtins.formatting.black,
---builtins.formatting.isort,
---builtins.formatting.clang_format,
---builtins.formatting.dfmt,
---builtins.formatting.stylua,
---builtins.formatting.prettierd.with({
---disabled_filetypes = {
---'html'
---}
---}),
---},
---})
